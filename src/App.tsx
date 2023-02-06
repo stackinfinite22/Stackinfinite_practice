@@ -1,29 +1,30 @@
-import React, { FC } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import "react-toastify/dist/ReactToastify.css";
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import Navbar from './components/NavBar';
+import Cart from './components/Cart';
+import Home from './components/Home';
+import ErrorPage from './components/ErrorPage';
+import Explore from './components/Explore';
 
-import { RootState } from './store';
-import Search from './components/Search';
-import Alert from './components/Alert';
-import Weather from './components/Weather';
-import { setAlert } from './store/actions/alertActions';
-import { setError } from './store/actions/weatherActions';
 
-const App: FC = () => {
-  const dispatch = useDispatch();
-  const weatherData = useSelector((state: RootState) => state.weather.data);
-  const loading = useSelector((state: RootState) => state.weather.loading);
-  const error = useSelector((state: RootState) => state.weather.error);
-  const alertMsg = useSelector((state: RootState) => state.alert.message);
-
+function App() {
+ 
   return (
-    <div className="has-text-centered">
-      <Search title="Enter city name and press search button" />
-      {loading ? <h2 className="is-size-3 py-2">Loading...</h2> : weatherData && <Weather data={weatherData} />}
-
-      {alertMsg && <Alert message={alertMsg} onClose={() => dispatch(setAlert(''))} />}
-      {error && <Alert message={error} onClose={() => dispatch(setError())} />}
+    <div className="App">
+      <BrowserRouter  >
+       <ToastContainer/>
+        <Navbar/>
+        <Explore/>
+        <Routes>
+         <Route  path ="/cart"  element={<Cart/>}/>
+         <Route  path ="/error-page"  element={<ErrorPage/>}/>
+         <Route  path ="/"  element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
+
 export default App;

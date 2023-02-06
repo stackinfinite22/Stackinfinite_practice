@@ -1,0 +1,28 @@
+{
+    "products":[
+ 
+      {
+        "id":1,
+        "name":"KOTTY",
+        "description":"Women Solid Puffer Jacket",
+        "image":"https://rukminim1.flixcart.com/image/832/832/kwpam4w0/jacket/q/p/c/-original-imag9bqgkhub2yff.jpeg?q=70",
+        "price":899
+      },
+      {
+        "id":2,
+        "name":"NEON-9",
+        "description":"Girls Slim Mid Rise Light Blue Jeans",
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/jean/1/o/c/13-14-years-light-frill-jeans-13-zodio-original-imaggz2hwu5btt2a.jpeg?q=70",
+        "price":999
+      },
+      {
+        "id":3,
+        "name":"Deebaco",
+        "description":"Women Blazer & Pant Co-Ord Set Solid Suit",
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/suit/8/3/o/xs-dbco00000472b-deebaco-original-imagk3azpskt842f.jpeg?q=70",
+        "price":1099
+      }
+      
+    ]
+  
+}
